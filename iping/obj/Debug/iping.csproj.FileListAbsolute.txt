@@ -1,0 +1,10 @@
+D:\Software Development\c#\iping\iping\bin\Debug\iping.exe.config
+D:\Software Development\c#\iping\iping\bin\Debug\iping.exe
+D:\Software Development\c#\iping\iping\bin\Debug\iping.pdb
+D:\Software Development\c#\iping\iping\obj\Debug\iping.csprojAssemblyReference.cache
+D:\Software Development\c#\iping\iping\obj\Debug\iping.Frm_iping.resources
+D:\Software Development\c#\iping\iping\obj\Debug\iping.Properties.Resources.resources
+D:\Software Development\c#\iping\iping\obj\Debug\iping.csproj.GenerateResource.cache
+D:\Software Development\c#\iping\iping\obj\Debug\iping.csproj.CoreCompileInputs.cache
+D:\Software Development\c#\iping\iping\obj\Debug\iping.exe
+D:\Software Development\c#\iping\iping\obj\Debug\iping.pdb
