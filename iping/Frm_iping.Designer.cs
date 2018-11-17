@@ -157,6 +157,7 @@
             // 
             // Btn_StopLoop
             // 
+            this.Btn_StopLoop.Enabled = false;
             this.Btn_StopLoop.Location = new System.Drawing.Point(548, 363);
             this.Btn_StopLoop.Name = "Btn_StopLoop";
             this.Btn_StopLoop.Size = new System.Drawing.Size(101, 23);

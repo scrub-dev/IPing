@@ -18,7 +18,8 @@ namespace iping
         List<decimal> DelayList = new List<decimal>();
         int NumberOfAttempts;
         int SuccessfulAttempts; 
-        System.Timers.Timer Timer;
+        System.Timers.Timer ATimer;
+        
 
         public Frm_iping()
         {
@@ -26,10 +27,10 @@ namespace iping
         }
 
         private void SetTimer(int triggertime) {
-            Timer = new System.Timers.Timer(triggertime); // Sets a new timer with the set Trigger time
-            Timer.Elapsed += OnTimedEvent; // Add the OnTimedEvent to when the timer has elaped the trigger time
-            Timer.Enabled = true; // Enable the timer on click
-            Timer.AutoReset = true; // Reset the timer automatically
+            ATimer = new System.Timers.Timer(triggertime); // Sets a new timer with the set Trigger time
+            ATimer.Elapsed += OnTimedEvent; // Add the OnTimedEvent to when the timer has elaped the trigger time
+            ATimer.Enabled = true; // Enable the timer on click
+            ATimer.AutoReset = true; // Reset the timer automatically
         }
 
         private void OnTimedEvent(object sender, ElapsedEventArgs e)
@@ -144,17 +145,29 @@ namespace iping
         private void Btn_ClearOutput_Click(object sender, EventArgs e)
         {
             Rtb_Output.Text = ""; // Clears all Text from the output
+            NumberOfAttempts = 0; // Resets the Number of attempts
+            SuccessfulAttempts = 0; // Resets the Number of successful attempts
+            DelayList.Clear(); // Clears the Delay list
+
+
+            GC.Collect(); //Force garbage collection.
+            GC.WaitForPendingFinalizers(); // Wait for all finalizers to complete before continuing.
         }
 
         private void Btn_StartLoop_Click(object sender, EventArgs e)
         {
+            if (Btn_StartLoop.Enabled) Btn_StartLoop.Enabled = false;
+            Btn_StopLoop.Enabled = true;
             SetTimer(Convert.ToInt16(Txt_TriggerTime.Text)); // Sets the Timer to start the auto mode
         }
 
         private void Btn_StopLoop_Click(object sender, EventArgs e)
         {
-            Timer.Stop(); //Stops the timer
-            Timer.Dispose(); // Releases the timers resources
+            if (Btn_StopLoop.Enabled) Btn_StopLoop.Enabled = false;
+            Btn_StartLoop.Enabled = true;
+
+            ATimer.Stop(); //Stops the timer
+            ATimer.Dispose(); // Releases the timers resources
         }
     }
 }
