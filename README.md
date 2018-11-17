@@ -1,6 +1,6 @@
-# <IPing>
+# IPing
 ### Improved Ping
-======
+===
 
 IPing (Improved Ping) Is a simple C# Windows Form Program that uses the Ping CLI Tool and gives it more
 features as well as an intuitive User interface.
