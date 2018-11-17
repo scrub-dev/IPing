@@ -7,3 +7,4 @@ D:\Software Development\c#\iping\iping\obj\Release\iping.csproj.GenerateResource
 D:\Software Development\c#\iping\iping\obj\Release\iping.csproj.CoreCompileInputs.cache
 D:\Software Development\c#\iping\iping\obj\Release\iping.exe
 D:\Software Development\c#\iping\iping\obj\Release\iping.pdb
+D:\Software Development\c#\iping\iping\obj\Release\iping.csprojAssemblyReference.cache
